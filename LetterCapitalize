@@ -1,0 +1,16 @@
+def LetterCapitalize(str)
+  
+  a = str.each_line(' ').to_a
+
+  for i in 0..a.length-1
+   a[i] = a[i].capitalize
+  end
+  
+  # code goes here
+  return a.to_s
+         
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+LetterCapitalize(STDIN.gets)           
