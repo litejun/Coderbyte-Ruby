@@ -1,0 +1,29 @@
+def ABCheck(str)
+
+  a = []
+  str.scan(/a/) do |c|
+    a << $~.offset(0)[0]
+  end
+  
+  b = []
+  str.scan(/b/) do |c|
+    b << $~.offset(0)[0]
+  end
+  
+  for i in 0..a.length
+    for j in 0..b.length
+    if a[i].to_i + 4 == b[j].to_i
+      return true
+    end
+    if b[j].to_i + 4 == a[i].to_i
+      return true
+    end
+      
+    end
+  end
+    return false
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+ABCheck(STDIN.gets)  
