@@ -1,0 +1,12 @@
+def SecondGreatLow(arr)
+  a = arr.sort.to_a[1]
+  b = arr.sort.to_a[arr.length-2]
+  
+  return b
+
+         
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+SecondGreatLow(STDIN.gets)  
