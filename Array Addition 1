@@ -1,0 +1,21 @@
+def ArrayAdditionI(arr)
+
+  a = arr.sort.last
+  b = arr.sort.pop
+  d = 0
+  for i in 1..b.length
+	c = b.combination(i).to_a
+
+    	for j in 0..i-1
+          if a == c[j].inject(:+)
+      		return true
+    	  end
+        end
+    
+  end
+  return false     
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+ArrayAdditionI(STDIN.gets)  
