@@ -1,12 +1,11 @@
 def ArrayAdditionI(arr)
 
   a = arr.sort.last
-  b = arr.sort.pop
-  d = 0
-  for i in 1..b.length
-	c = b.combination(i).to_a
 
-    	for j in 0..i-1
+  for i in 1..arr.length
+	c = arr.combination(i).to_a
+
+    	for j in 0..arr.combination(i).count
           if a == c[j].inject(:+)
       		return true
     	  end
